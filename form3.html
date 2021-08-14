@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contacto</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="form2.html">Servicios</a></li>
+        <li><a href="form4.html">Clientes</a></li>
+        <li><a href="form3.html">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+        <img src="static/contacto.jpg" alt="" height="100px">
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <div class="container">
+        <h2>Contacto</h2><br><br>
+        <p>Hola, si quieres dejar tus datos para comunicarnos contigo si tuvieras alguna pregunta sobre la infrmación anterior o dejarme algun comentario.</p>
+        <form class="form-inline" action="contacto.php" method="POST">
+          <div class="form-group">
+            <label for="name">Nombre:</label>
+            <input type="name" class="form-control" id="name" placeholder="Nombre" name="name">
+            <label for="number">Teléfono:</label>
+            <input type="number" class="form-control" id="number" placeholder="Numero" name="number">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            <hr>
+            <p>Selecciona el servicio que te interesaria conocer: </p>
+              <input type="radio" id="servicio1" name="servicio1" value="servicio1">
+              <label for="servicio1">Amazon cloud drive</label><br>
+              <input type="radio" id="servicio2" name="servicio2" value="servicio2">
+              <label for="servicio2">Box</label><br>
+              <input type="radio" id="servicio3" name="servicio3" value="servicio3">
+              <label for="servicio3">Dropbox</label>
+              <input type="radio" id="servicio4" name="servicio4" value="servicio4">
+              <label for="servicio4">OneDrive</label>
+              <input type="radio" id="servicio5" name="servicio5" value="servicio5">
+              <label for="servicio5">Google Dirve</label>
+            <hr>
+           <input type="checkbox" id="antes" name="antes">
+           <label for="antes">Indicar si ha sido cliente de la organización antes</label>
+          </div>
+          <hr>
+          <button type="submit" class="btn btn-default">Enviar</button>
+        </form>
+    </div>
+  </div>
+</div>
+<hr>
+<footer class="container-fluid text-center">
+  <p>Empresa MYCX</p>
+</footer>
+</body>
+</html>
+
